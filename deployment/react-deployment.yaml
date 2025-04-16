@@ -1,0 +1,22 @@
+#React-app-deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-app-deployment
+  labels:
+    app: react-app-deployment
+spec:
+  selector:
+    matchLabels:
+      app: react-app-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: react-app-deployment
+    spec:
+      containers:
+      - name: react-app
+        image: yogiy31/react-app:v2
+        ports:
+        - containerPort: 3000

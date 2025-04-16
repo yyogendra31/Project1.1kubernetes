@@ -1,0 +1,13 @@
+# Servcie file for the deployment.
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-react-service
+spec:
+  type: NodePort
+  selector:
+    app: react-app-deployment
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
