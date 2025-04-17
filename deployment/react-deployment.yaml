@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: yogiy31/react-app:build-20
+        image: yogiy31/react-app:build-22
         ports:
         - containerPort: 3000
